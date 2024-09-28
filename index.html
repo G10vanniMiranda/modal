@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produto Modal</title>
+</head>
+<body>
+    <h1>Treinamento com Javascript</h1>
+
+    <button id="abrir1">Abrir Produto 1</button>
+    <button id="abrir2">Abrir Produto 2</button>
+
+   <main>
+        <dialog id="produto1">
+            <section>
+                <h2>Titulo do produto</h2>
+                <img width="200" src="https://www.kabum.com.br/_next/image?url=https%3A%2F%2Fimages.kabum.com.br%2Fprodutos%2Ffotos%2F238671%2Fconsole-sony-playstation-5_1634132554_g.jpg&w=1080&q=75" alt="">
+                <h4>Preço: R$ 400,00</h4>
+            </section>
+            <button id="fechar1">X</button>
+        </dialog>
+
+        <!-- <dialog id="produto2">
+            <section>
+                <h2>Titulo do produto</h2>
+                <img width="300" src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Nintendo_Switch_2.png" alt="">
+                <h4>Preço: R$ 400,00</h4>
+            </section>
+            <button id="fechar2">X</button>
+        </dialog> -->
+
+        <dialog id="produto2">
+            <section>
+                <h2>Cadastrar</h2>
+                <form>
+                    <input type="text" placeholder="E-mail">
+                    <input type="password" placeholder="Senha">
+                </form>
+            </section>
+            <button id="fechar2">X</button>
+        </dialog>
+   </main>
+
+    <script>
+        var abrir_produto1 = document.querySelector("#abrir1")
+        var abrir_produto2 = document.querySelector("#abrir2")
+
+        var fechar1 = document.querySelector("#fechar1")
+        var fechar2 = document.querySelector("#fechar2")
+
+        var modal1 = document.querySelector("#produto1")
+        var modal2 = document.querySelector("#produto2")
+
+        abrir1.onclick = () => {
+            modal1.showModal()
+        }
+
+        fechar1.onclick = () => {
+            modal1.close()
+        }
+
+        abrir2.onclick = () => {
+            modal2.showModal()
+        }
+
+        fechar2.onclick = () => {
+            modal2.close()
+        }
+    </script>
+
+    <style>
+        main{
+            position: relative;
+        }
+        #produto1, #produto2{
+            margin-top: 50px;
+        }
+        dialog::backdrop{
+            background-color: black;
+        }
+        dialog{
+            width: 300px;
+            height: 350px;
+            border-radius: 10px;
+            background-color: white;
+            padding: 20px;
+
+            position: absolute;
+            top: 100px;
+            left: 5%;
+
+            border: none;
+
+        }
+        dialog section {
+             /* centraligar os elementos */
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             flex-direction: column;
+        }
+    </style>
+
+</body>
+</html>
