@@ -1,0 +1,220 @@
+    <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube</title>
+</head>
+<body>
+    <header>Header</header>
+    <section>
+        <nav>
+            <div class="row">
+                <ul>
+                    <li>X <span>Início</span></li>
+                    <li>X <span>Shorts</span></li>
+                    <li>X <span>Inscrições</span></li>
+                </ul>
+                <hr>
+            </div>
+            <div class="row">
+                <ul>
+                    <li>X <span>Você</span></li>
+                    <li>X <span>Histórico</span></li>
+                </ul>
+                <hr>
+            </div>
+            <div class="row">
+                <p>
+                    Faça login para curtir vídeos, comentar e se inscrever.
+                </p>
+                <button id="fazer_login">
+                    x
+                    Fazer login
+                </button>
+                <hr>
+            </div>
+        </nav>
+        <main>
+            <header>
+                <ul class="nav-2">
+                    <li>Todos</li>
+                    <li>Shorts</li>
+                    <li>Não assistidos</li>
+                    <li>Assistidos</li>
+                    <li>Enviados recentemente</li>
+                    <li>Ao vivo</li>
+                    <li>Playlists</li>
+                </ul>
+                <button id="filtros">
+                    <strong>Filtros</strong>
+                    xx
+                </button>
+            </header>
+            <section class="videos">
+                <div class="row">
+                    <iframe src="https://www.youtube.com/embed/LwTbvEIOsKI?si=hqzULAj7nihmvEu3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div>
+                        <h3>Joarda Javaascript - Online e Gratuito</h3>
+                        <p>Inscreva-se na Jornada Python da Hashtag e saiba se tornar o Destaque no Mercado</p>
+                        <p>Patrocinado - Hashtag Programação</p>
+                    </div>
+                    <button class="btn-row">...</button>
+                </div>
+                <div class="row">
+                    <iframe src="https://www.youtube.com/embed/WRlfwBof66s?si=IJzn--DqSlTgF9NI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div>
+                        <h3>Joarda Javaascript - Online e Gratuito</h3>
+                        <p>Inscreva-se na Jornada Python da Hashtag e saiba se tornar o Destaque no Mercado</p>
+                        <p>Patrocinado - Hashtag Programação</p>
+                    </div>
+                    <button class="btn-row">...</button>
+                </div>
+                <div class="row">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Fhy-5CtVkiM?si=_Xq7m_4-O6JhXR60" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div>
+                        <h3>Joarda Javaascript - Online e Gratuito</h3>
+                        <p>Inscreva-se na Jornada Python da Hashtag e saiba se tornar o Destaque no Mercado</p>
+                        <p>Patrocinado - Hashtag Programação</p>
+                    </div>
+                    <button class="btn-row">...</button>
+                </div>
+            </section>
+        </main>
+    </section>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+            list-style: none;
+        }
+        body{
+            color: #fff;
+            background-color: #1c1c1c;
+            overflow: hidden;
+        }
+        header{
+            height: 7vh; /* tamanho da tela disponivel 700 7000*/
+        }
+        header, nav, main{
+            margin: 10px;
+        }
+        section{
+            display: flex;
+        }
+        nav, main{
+            height: 93vh
+        }
+        nav{
+            width: 15%;
+        }
+        main{
+            width: 85%;   
+        }
+        main header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nav-2{
+            margin-left: 10px;
+            gap: 10px;
+            display: flex;
+            
+        }
+        .nav-2 li{
+            border-radius: 7px;
+            padding: 10px 15px;
+
+            background-color: #000;
+            transition: .9s;
+        }
+        .nav-2 li:hover{
+            cursor: pointer;
+            background-color: #1c1c1c;
+
+            border: 1px solid #ccc;
+        }
+        #filtros{
+            color: #fff;
+            cursor: pointer;
+            padding: 10px 15px;
+            border-radius: 5px;
+            background-color: #000;
+            border: none;
+            transition: .9s;
+        }
+        #filtros:hover{
+            background-color: #1c1c1c;
+            border: 1px solid #ccc;
+        }
+        .btn-row{
+            color: #ccc;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 16px;
+            font-weight: bold;
+            padding-top: -40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: rotate(90deg);
+            border: 0;
+            cursor: pointer;
+            background-color: #000;
+            transition: .9s;
+            margin-left: 180px;
+        }
+        .btn-row:hover{
+            background-color: #1c1c1c;
+        }
+        .videos{
+            height: 600px;
+
+            overflow-y: scroll;
+
+            display: flex;
+            flex-direction: column;
+            
+        }
+        .row{
+            gap: 10px;
+            width: 98%;
+            margin: 10px;
+            display: flex;
+            justify-content: space-end;
+        }
+        .row iframe{ width: 600px; height: 400px;}
+        nav .row{
+            gap: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+        nav .row ul li{
+            padding: 10px;
+            display: flex;
+            gap: 20px;
+            margin: 10px;
+        }
+        nav .row ul li:hover{
+            cursor: pointer;
+            border-radius: 15px;
+            background-color: #000;
+        }
+        #fazer_login{
+            width: 120px;
+            height: 40px;
+            padding: 5px;
+            border-radius: 20px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</body>
+</html>
