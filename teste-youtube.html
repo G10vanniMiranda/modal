@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Youtube</title>
 </head>
 <body>
     <header>Header</header>
+
     <section>
         <nav>
             <div class="row">
                 <ul>
-                    <li>X <span>Início</span></li>
+                    <li><i class="fa-solid fa-house"></i> <span>Início</span></li>
                     <li>X <span>Shorts</span></li>
                     <li>X <span>Inscrições</span></li>
                 </ul>
@@ -19,8 +21,8 @@
             </div>
             <div class="row">
                 <ul>
-                    <li>X <span>Você</span></li>
-                    <li>X <span>Histórico</span></li>
+                    <li><i class="fa-regular fa-clock"></i><span>Você</span></li>
+                    <li><i class="fa-solid fa-clock-rotate-left"></i> <span>Histórico</span></li>
                 </ul>
                 <hr>
             </div>
@@ -29,12 +31,17 @@
                     Faça login para curtir vídeos, comentar e se inscrever.
                 </p>
                 <button id="fazer_login">
-                    x
+                    <i class="fa-regular fa-circle-user"></i>
                     Fazer login
                 </button>
                 <hr>
             </div>
+            <div class="row">
+                <img src="./youtube.webp" alt="">
+            <hr>
+            </div>
         </nav>
+        
         <main>
             <header>
                 <ul class="nav-2">
@@ -94,7 +101,7 @@
         body{
             color: #fff;
             background-color: #1c1c1c;
-            overflow: hidden;
+            /* overflow: hidden; */
         }
         header{
             height: 7vh; /* tamanho da tela disponivel 700 7000*/
@@ -195,7 +202,7 @@
             flex-direction: column;
         }
         nav .row ul li{
-            padding: 10px;
+            padding: 10px; /*  */
             display: flex;
             gap: 20px;
             margin: 10px;
@@ -209,11 +216,26 @@
             width: 120px;
             height: 40px;
             padding: 5px;
+            color: blue;
             border-radius: 20px;
+            border: 1px solid #fff;
+            background-color: #1c1c1c;
+            cursor: pointer;
+            font-size: 14px;
+            opacity: .6;
 
+            gap: 5px;
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+        #fazer_login:hover{
+            opacity: .6;
+            background-color: skyblue;
+        }
+        section nav{
+
+            overflow-y: scroll;
         }
     </style>
 </body>
