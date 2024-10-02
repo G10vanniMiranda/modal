@@ -3,9 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cadastro.css">
     <title>Cadastro</title>
 </head>
 <body>
     
+    <form class="form">
+        <h1>Faça seu cadastro agora!</h1>
+
+        <div class="row">
+            <div class="divInput">
+                <label for="nomeInput">Nome</label>
+                <input type="text" id="nomeInput" placeholder="Nome do Usúario" />
+            </div>
+    
+            <div class="divInput">
+                <label for="generoInput">Genêro</label>
+                <select name="generoInput" id="generoInput">
+                    <option value="">Escolha seu Genêro</option>
+                    <option value="feminino">Feminino</option>
+                    <option value="masculino">Masculino</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="divInput">
+                <label for="emailInput">Email</label>
+                <input type="text" id="emailInput" placeholder="Email do Usúario" />
+            </div>
+    
+            <div class="divInput">
+                <label for="senhaInput">Senha</label>
+                <input type="password" id="senhaInput" placeholder="Senha da Conta" />
+            </div>
+        </div>
+
+        <button class="btnCad">Cadastrar</button>
+
+    </form>
+
 </body>
 </html>
