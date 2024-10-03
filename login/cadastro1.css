@@ -1,0 +1,66 @@
+*{ /* Reset */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    color: #fff; /* Cor da fonte */
+    height: 100vh; /* Altura */
+    
+    /* Alinhar os elementos no meio */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Alinhamento em coluna */
+
+    background-color: #000;
+}
+form{
+    width: 350px; /* Largura */
+    height: 280px; /* Altura */
+    padding: 20px; /* Expande o elemento de dentro pra fora */
+    border-radius: 15px; /* Arredondamento das borda */
+
+    gap: 10px; /* Espaçamento dos elementos */ 
+    display: flex; /* Alinha os elementos */
+    flex-direction: column; /* Alinha os elementos em coluna */
+
+    background-color: #777; /* Cor da fonte */
+}
+h1{
+    text-align: center; /* Alinha a fonte */
+    font-size: 24px; /* Tamanho da fonte */
+}
+input[type="file"]{ /*  */
+    background-color: #1c1c1c;
+}
+input{
+    padding: 2px;
+    border: none; /* Tira as borda */
+    outline: none; /* Tira as borda de dentro */
+    border-radius: 4px; /* Arredondamento das borda */
+    background-color: #1c1c1c; /* Cor do elemento */
+}
+button{
+    margin-top: 20px; /* Empurra o elemento para cima ou para baixo */
+    border: none; /* Tira as borda */
+    padding: 6px; /* Expande o elemento de dentro pra fora */
+    color: #fff; /* Cor da fonte */
+    border-radius: 4px;
+    background-color: #1c1c1c; /* Cor de fundo */
+
+    cursor: pointer; /* Mãozinha do mouse */
+}
+.tema button{
+    height: 50px; /* Altura */
+    width: 50px; /* Largura */
+    margin-bottom: 10px; /* Não sei */
+    border-radius: 50%; /* Arredondamento das bordas */
+
+    opacity: .6; /* Transparencia do elemento */
+    transition: .9s; /* Tempo */
+}
+.tema button:hover{ /* Efeito no elemento */
+    opacity: 1; /*  */
+    font-size: 1.05em;
+}
